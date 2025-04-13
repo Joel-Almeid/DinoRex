@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fundo branco */
+}
+
+.game {
+  border-bottom: 1px solid #000; /* Linha inferior em preto */
+  height: 300px;
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.score {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  font-size: x-large;
+  color: #000000; /* Texto preto */
+  border: 2px solid #000; /* Borda preta */
+  padding: 10px;
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff; /* Fundo branco sólido */
+  background-image: url(img/dino.gif); /* Imagem do dinossauro (gif) */
+  width: 280px;
+  height: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scaleX(-1); /* Corre para frente */
+}
+
+.car {
+  position: absolute;
+  bottom: 0;
+  background-image: url(img/car.png); /* Imagem do carro */
+  width: 200px;
+  height: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scaleX(-1); /* Corre para frente */
+}
+
+.cacto {
+  position: absolute;
+  bottom: 0;
+  background-image: url(img/cacto.png);
+  width: 35px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: cacto 3s linear infinite; /* Faz os cactos se moverem */
+}
+
+.cactus {
+  position: absolute;
+  bottom: 0;
+  background-image: url(img/cactus.png);
+  width: 80px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: cacto 3s linear infinite; /* Faz os cactos se moverem */
+}
+
+@keyframes cacto {
+  0% {
+    right: -20px;
+  }
+  100% {
+    right: 850px;
+  }
+}
+
+.jump {
+  animation: jump 1.4s linear; /* Duração ajustada do salto */
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 80px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  80% {
+    bottom: 80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+#trocar-personagem {
+  background-color: #000000; /* Botão preto */
+  color: #ffffff; /* Texto branco */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#trocar-personagem:hover {
+  background-color: #ffffff; /* Branco no hover */
+  color: #000000; /* Texto preto */
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nuvem {
+  position: absolute;
+  top: 20px; /* Ajuste a posição vertical da nuvem */
+  left: 50%; /* Posição inicial da nuvem */
+  background-image: url('img/cloud.jpg'); /* Caminho da sua imagem de nuvem */
+  width: 100px; /* Largura da nuvem */
+  height: 60px; /* Altura da nuvem */
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moverNuvem 10s linear infinite; /* Faz a nuvem se mover */
+}
+
+@keyframes moverNuvem {
+  from {
+    left: 100%; /* Começa fora da tela à direita */
+  }
+  to {
+    left: -100%; /* Sai pela esquerda */
+  }
+}
