@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #f7f7f7; /* Fundo branco */
 }
 
 .game {
